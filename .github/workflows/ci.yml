@@ -28,8 +28,17 @@ jobs:
       run: |
         python -m pytest
 
-    - name: Build step
-      run: echo "🔨 Build successful (dummy step)"
+        - name: Build step
+      run: |
+        echo "🔨 Build successful (dummy step)"
+        mkdir -p dist
+        echo "Dummy build artifact" > dist/build.txt
 
     - name: Deploy step
       run: echo "🚀 Deploying to fake environment..."
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: dummy-build
+        path: dist/
