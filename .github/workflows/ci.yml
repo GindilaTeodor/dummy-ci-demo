@@ -28,7 +28,7 @@ jobs:
       run: |
         python -m pytest
 
-        - name: Build step
+    - name: Build step
       run: |
         echo "🔨 Build successful (dummy step)"
         mkdir -p dist
