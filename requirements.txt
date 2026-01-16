@@ -1,0 +1,3 @@
+# pentru acest demo, nu e nevoie de librarii externe
+# dacă vrei, poți adăuga pytest
+pytest
